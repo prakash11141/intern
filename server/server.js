@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
 
 // Your middleware and routes setup
 app.use("/api/products", productRoutes);
+
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`);

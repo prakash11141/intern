@@ -30,10 +30,16 @@ export const getProductByID = async (req, res) => {
   }
 };
 export const addProduct = async (req, res) => {
-  const { name, category_id, price } = req.body;
+  const { name, category_id, price, image, description } = req.body;
   const id = parseInt(req.params.id);
   try {
-    const result = await pool.query(addProduct1, [name, category_id, price]);
+    const result = await pool.query(addProduct1, [
+      name,
+      category_id,
+      price,
+      image,
+      description,
+    ]);
     res.status(201).send("product added successfully");
   } catch (error) {
     console.error(error);
