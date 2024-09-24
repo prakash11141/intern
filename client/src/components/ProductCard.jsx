@@ -19,12 +19,16 @@ const ProductCard = ({
       </div>
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-800 hover:text-blue-500 transition duration-200">
-          <a href={href} className="hover:underline">
-            {name}
-          </a>
+          <span className="inline-block bg-purple-700 text-white rounded-full px-3 py-1">
+            <a href={href}>{name}</a>
+          </span>
         </h3>
         <p className="mt-1 text-gray-600 line-clamp-2">{description}</p>
-        <p className="mt-2 text-lg font-medium text-gray-900">{price}</p>
+        <p className="mt-2 text-lg font-medium text-gray-900">
+          <span className="inline-block bg-white text-black rounded-full px-3 py-1 border border-yellow-400 shadow-md">
+            Rs.{price}
+          </span>
+        </p>
       </div>
       <div className="p-4 flex justify-between">
         <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition duration-200 transform hover:scale-105">
